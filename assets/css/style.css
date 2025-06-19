@@ -223,26 +223,33 @@ footer a:hover {
         columns: 1;
     }
 
-  #btn-topo {
+#btn-topo {
   position: fixed;
   bottom: 40px;
   right: 40px;
   z-index: 99;
+  width: 60px;
+  height: 60px;
   border: none;
   outline: none;
   background-color: var(--cor3);
   color: white;
   cursor: pointer;
-  padding: 15px;
   border-radius: 50%;
-  font-size: 18px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 32px;
+  justify-content: center;
+  align-items: center;
   display: none;
-  transition: 0.3s;
+}
+
+#btn-topo .material-icons {
+  font-size: 32px;
 }
 
 #btn-topo:hover {
   background-color: var(--cor4);
 }
+
 
 }
