@@ -222,4 +222,27 @@ footer a:hover {
     aside > ul {
         columns: 1;
     }
+
+    #btn-topo {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--cor3);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  display: none;
+  transition: 0.3s;
+}
+
+#btn-topo:hover {
+  background-color: var(--cor4);
+}
+
 }
