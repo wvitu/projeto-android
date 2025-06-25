@@ -288,3 +288,28 @@ body.dark main {
 body.dark header {
   background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
 }
+
+.timeline-box {
+  margin-top: 30px;
+}
+
+.timeline-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 16px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.timeline-container .evento {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background-color: #c5ebd6;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  box-shadow: 0 2px 4px #00000020;
+  min-width: 120px;
+}
+
