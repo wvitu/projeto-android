@@ -1,17 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const btnTopo = document.getElementById("btn-topo");
   const toggle = document.getElementById("toggle-dark");
 
-  // Botão "voltar ao topo"
-  btnTopo.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-
-  // Dark mode (com persistência)
+  // Aplica o tema salvo (se houver)
   if (localStorage.getItem("tema") === "dark") {
     document.body.classList.add("dark");
   }
 
+  // Alternar e salvar preferência
   toggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
 
@@ -21,4 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("tema", "light");
     }
   });
+  
 });
+
