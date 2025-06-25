@@ -239,8 +239,6 @@ footer a:hover {
     color: var(--cor1);
 }
 
-<<<<<<< HEAD:estilo/style.css
-/* Botão flutuante Dark Mode */
 #toggle-dark {
   position: fixed;
   top: 20px;
@@ -262,7 +260,7 @@ footer a:hover {
 
 #toggle-dark:hover {
   background-color: var(--cor4);
-=======
+
 @media (max-width: 600px) {
     nav {
         flex-direction: column;
@@ -335,8 +333,4 @@ body.dark main {
 
 body.dark header {
   background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-}
-
-
->>>>>>> f93b175d94fe6078ebcfefa1b1e4a8631a4cc266:assets/css/style.css
 }
