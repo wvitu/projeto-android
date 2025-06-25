@@ -31,7 +31,7 @@ body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
     color: #333;
-    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s; /* ← transição suave */
 }
 
 body.dark {
@@ -239,6 +239,7 @@ footer a:hover {
     color: var(--cor1);
 }
 
+/* Botão flutuante Dark Mode */
 #toggle-dark {
   position: fixed;
   top: 20px;
@@ -256,63 +257,16 @@ footer a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
 
 #toggle-dark:hover {
   background-color: var(--cor4);
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-    aside > ul {
-        columns: 1;
-    }
-
-#btn-topo {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  z-index: 99;
-  width: 60px;
-  height: 60px;
-  border: none;
-  outline: none;
-  background-color: var(--cor3);
-  color: white;
-  cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  font-size: 32px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  transform: rotate(20deg) scale(1.1); /* ← animação leve ao passar o mouse */
 }
 
-#btn-topo .material-icons {
-  font-size: 32px;
-}
-
-#btn-topo:hover {
-  background-color: var(--cor4);
-}
-
-/* Botão de Dark Mode no header */
-#toggle-dark {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  color: white;
-  font-size: 32px;
-  transition: color 0.3s;
-}
-
-#toggle-dark:hover {
-  color: var(--cor1);
+#toggle-dark span {
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Tema escuro */
