@@ -31,6 +31,31 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+body.dark {
+  --cor0: #121212;
+  --cor1: #2fa866;
+  --cor2: #2fa866;
+  --cor3: #1e6b4c;
+  --cor4: #14523a;
+  --cor5: #0b3a24;
+  color: #e0e0e0;
+}
+
+body.dark main {
+  background-color: #1c1c1c;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+}
+
+body.dark header {
+  background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+}
+
+body.dark nav,
+body.dark footer {
+  background-color: var(--cor5);
+}
+
+
 a.externo::after {
     content: '\00A0\1F517';
 }
@@ -203,3 +228,26 @@ footer a:hover {
     color: var(--cor1);
 }
 
+/* Botão flutuante Dark Mode */
+#toggle-dark {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: var(--cor3);
+  border: none;
+  cursor: pointer;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#toggle-dark:hover {
+  background-color: var(--cor4);
+}

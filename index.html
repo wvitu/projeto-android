@@ -6,7 +6,14 @@
     <title>Como surgiu o mascote do Android?</title>
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilo/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+<body>
+
+<button id="toggle-dark" title="Alternar tema">
+  <span class="material-icons">dark_mode</span>
+</button>
+
 <body>
     <header>
         <h1>Curiosidades de Tecnologia</h1>
@@ -143,5 +150,13 @@
     <footer>
         <p>Site criado por <a href="https://github.com/wvitu" target="_blank">Wanderson Vitor</a> para o <a href="https://www.youtube.com/cursoemvideo" target="_blank">CursoemVideo</a></p>
     </footer>
+
+    <script>
+  const toggle = document.getElementById("toggle-dark");
+  toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+  });
+</script>
+
 </body>
 </html>
