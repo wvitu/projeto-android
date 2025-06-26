@@ -1,6 +1,7 @@
 # 🟢 Curiosidades de Tecnologia - Mascote do Android
 
 Este projeto é uma página web interativa criada com foco em HTML, CSS e JavaScript, com o objetivo de explorar de forma didática a origem do mascote do sistema Android e suas versões ao longo da história.
+Confira: https://wvitu.github.io/projeto-android/
 
 ## ✨ Funcionalidades
 
