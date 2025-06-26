@@ -19,9 +19,10 @@
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
     --fonte-android: 'Android', cursive;
+
 }
 
-* {
+    {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,33 +32,32 @@ body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
     color: #333;
-    transition: background-color 0.3s, color 0.3s; /* ← transição suave */
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark {
-  --cor0: #121212;
-  --cor1: #2fa866;
-  --cor2: #2fa866;
-  --cor3: #1e6b4c;
-  --cor4: #14523a;
-  --cor5: #0b3a24;
-  color: #e0e0e0;
+    --cor0: #121212;
+    --cor1: #2fa866;
+    --cor2: #2fa866;
+    --cor3: #1e6b4c;
+    --cor4: #14523a;
+    --cor5: #0b3a24;
+    color: #e0e0e0;
 }
 
 body.dark main {
-  background-color: #1c1c1c;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    background-color: #1c1c1c;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 body.dark header {
-  background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
 }
 
 body.dark nav,
 body.dark footer {
-  background-color: var(--cor5);
+    background-color: var(--cor5);
 }
-
 
 a.externo::after {
     content: '\00A0\1F517';
@@ -68,10 +68,10 @@ header {
     min-height: 150px;
     text-align: center;
     padding: 40px 20px 50px 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-header > h1 {
+header>h1 {
     color: white;
     font-family: var(--fonte-destaque);
     font-size: 3em;
@@ -80,7 +80,7 @@ header > h1 {
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
-header > p {
+header>p {
     font-family: var(--fonte-padrao);
     font-size: 1.2em;
     color: white;
@@ -99,7 +99,7 @@ nav {
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
 }
 
-nav > a {
+nav>a {
     color: var(--cor1);
     padding: 10px 20px;
     border-radius: 5px;
@@ -108,7 +108,7 @@ nav > a {
     transition: all 0.3s ease;
 }
 
-nav > a:hover {
+nav>a:hover {
     background-color: var(--cor3);
     color: var(--cor5);
 }
@@ -170,7 +170,7 @@ main a:hover {
 main img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 main img.pequena {
@@ -188,7 +188,7 @@ div.video {
     border-radius: 10px;
 }
 
-div.video > iframe {
+div.video>iframe {
     position: absolute;
     top: 5%;
     left: 5%;
@@ -204,7 +204,7 @@ aside {
     margin-top: 20px;
 }
 
-aside > h3 {
+aside>h3 {
     background-color: var(--cor4);
     color: white;
     padding: 10px;
@@ -212,7 +212,7 @@ aside > h3 {
     border-radius: 10px 10px 0 0;
 }
 
-aside > ul {
+aside>ul {
     list-style-type: '\2714\00A0\00A0';
     list-style-position: inside;
     columns: 2;
@@ -239,63 +239,68 @@ footer a:hover {
     color: var(--cor1);
 }
 
-/* Botão flutuante Dark Mode */
 #toggle-dark {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background-color: var(--cor3);
-  border: none;
-  cursor: pointer;
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  font-size: 24px;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease-in-out, background-color 0.3s;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--cor3);
+    border: none;
+    cursor: pointer;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 24px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
 
 #toggle-dark:hover {
-  background-color: var(--cor4);
-  transform: rotate(20deg) scale(1.1); /* ← animação leve ao passar o mouse */
+    background-color: var(--cor4);
+    transform: rotate(20deg) scale(1.1);
 }
 
 #toggle-dark span {
-  transition: transform 0.3s ease-in-out;
-}
-
-/* Tema escuro */
-body.dark {
-  --cor0: #1c1c1c;
-  --cor1: #2fa866;
-  --cor2: #2fa866;
-  --cor3: #1e6b4c;
-  --cor4: #14523a;
-  --cor5: #0b3a24;
-  color: #e0e0e0;
+    transition: transform 0.3s ease-in-out;
 }
 
 body.dark main {
-  background-color: #2a2a2a;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.7);
+    background-color: #2a2a2a;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
 }
 
 body.dark header {
-  background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
 }
 
 .timeline {
-  display: flex;
-  overflow-x: auto;
-  gap: 16px;
-  padding: 16px;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 1rem;
+    scroll-padding: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #2e7d32 #d5f5dd;
+}
+
+.timeline::-webkit-scrollbar {
+    height: 10px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background-color: #2e7d32;
+    border-radius: 10px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: #d5f5dd;
+    border-radius: 10px;
 }
 
 .timeline-box h2 {
@@ -304,57 +309,40 @@ body.dark header {
     font-size: 1.5em;
 }
 
-.timeline-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px;
-    scroll-snap-type: x mandatory;
-}
-
-.timeline-scroll::-webkit-scrollbar {
-    height: 8px;
-}
-
-.timeline-scroll::-webkit-scrollbar-thumb {
-    background-color: #2e7d32;
-    border-radius: 4px;
-}
-
 .evento {
-  min-width: 200px;
-  background-color: #e0f2f1;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-  scroll-snap-align: start;
+    min-width: 200px;
+    background-color: #e0f2f1;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    scroll-snap-align: start;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-  transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .evento h4 {
-  font-size: 1.1rem;
-  color: #1b5e20;
-  margin-bottom: 6px;
+    font-size: 1.1rem;
+    color: #1b5e20;
+    margin-bottom: 6px;
 }
 
 .evento p {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
 }
 
 .evento small {
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: 4px;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 4px;
 }
 
 .evento:hover {
@@ -371,4 +359,3 @@ body.dark header {
 .versao:hover {
     color: #004d40;
 }
-
